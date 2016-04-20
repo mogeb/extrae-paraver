@@ -1,0 +1,782 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+	<TITLE>wxParaver Quick Reference</TITLE>
+	<meta name="generator" content="Bluefish 2.2.2" >
+	<meta name="author" content="Pedro Gonzalez" >
+	<META NAME="CREATED" CONTENT="20141126;16245600">
+	<META NAME="CHANGEDBY" CONTENT="Pedro Gonzalez">
+	<META NAME="CHANGED" CONTENT="20141216;12493600">
+	<META NAME="CHANGEDBY" CONTENT="Pedro Gonzalez">
+	<STYLE TYPE="text/css">
+	<!--
+		ol.nested { 
+		    counter-reset: section;
+		    list-style-type: none;
+		}
+		
+		ol.nested li.nested { counter-increment: section; }
+		ol.nested li.nested:before { content: counters(section, ".") ". "; }
+		
+	-->
+	</STYLE>
+</HEAD>
+
+<BODY LANG="es-ES" DIR="LTR">
+
+<A NAME="__RefHeading__537_1169509088"></A>
+<H1 CLASS="western">wxparaver Quick Reference</H1>
+
+<DIV ID="indice_contenido" DIR="LTR"><A NAME="indice_contenido|region"></A>
+	<OL class="nested">
+		<LI class="nested">
+		
+		
+			<A HREF="#main_window">Main Window</A>
+			
+			<OL class="nested">
+				<LI class="nested"><A HREF="#main_window_overview">Overview</A></LI>
+				<LI class="nested"><A HREF="#main_window_menu_bar">Menu Bar</A></LI>
+				<LI class="nested"><A HREF="#main_window_main_buttons_bar">Main Buttons Bar</A></LI>
+				<LI class="nested"><A HREF="#main_window_workspaces">Workspaces</A></LI>
+				<LI class="nested"><A HREF="#main_window_window_browser">Window Browser</A></LI>
+				<LI class="nested"><A HREF="#main_window_files_and_window_properties">Files &amp; Window Properties</A></LI>
+			</OL>
+				
+		</LI>
+
+
+
+		<LI class="nested">
+		
+			<A HREF="#__RefHeading__539_1169509088">Main Buttons</A>
+			
+			<OL class="nested">
+				<LI class="nested"><A HREF="#__RefHeading__511_1201041753">Main Window</A></LI>
+				<LI class="nested"><A HREF="#__RefHeading__515_1201041753">Histogram</A></LI>
+			</OL>
+				
+		</LI>
+		
+		
+		<LI class="nested">
+		
+			<A HREF="#__RefHeading__541_1169509088">Shortcuts Keys</A>
+			
+			<OL class="nested">
+				<LI class="nested"><A HREF="#__RefHeading__543_1169509088">Overview</A></LI>
+				<LI class="nested"><A HREF="#__RefHeading__545_1169509088">Menus</A></LI>
+				<LI class="nested"><A HREF="#__RefHeading__547_1169509088">Dialogs and Fields</A></LI>
+				<LI class="nested"><A HREF="#__RefHeading__212_715628310">Main Window Shortcut Keys</A></LI>
+				<LI class="nested"><A HREF="#__RefHeading__549_1169509088">Timelines and Histograms</A></LI>
+			</OL>
+			
+		</LI>
+	</OL>
+</DIV>
+
+<P ALIGN=LEFT><BR><BR></P>
+
+<A NAME="main_window"></A>
+<H2 CLASS="western">Main window</H2>
+<A NAME="main_window_overview"></A>
+<H3 CLASS="western">Overview</H3>
+<P ALIGN=LEFT>The main window centralizes most of the information of files,
+windows and their properties. The main window also allows navigating the main
+functionalities by the means of menus and buttons.</P>
+<P>Every window is identified and their properties can be modified. The main window also allows creating/selecting/combining timelines or
+histograms.</P>
+<P ALIGN=LEFT>The following image represents the main window during an analysis session:</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.png" NAME="gráficos1" ALIGN=CENTER WIDTH=313 HEIGHT=610 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>The general arrangement of the different sections is as follows: at the top there's a menu bar and a button bar; below them there's the “Workspaces” section and the “Window browser” section and
+the “Files &amp; Window Properties” section.</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P><BR><BR>
+</P>
+<A NAME="main_window_menu_bar"></A>
+<H3 CLASS="western">Menu bar</H3>
+<P ALIGN=LEFT>The menus and their entries follow general rules. They're separated
+by areas; some of them have associated shortcuts; others, ending with
+“...”, tells you that a dialog will be opened; those showing an
+arrow pointing to the right open submenus.</P>
+<P ALIGN=LEFT>There are 3 menus, “File”, “Hints” and “Help”. Menu
+“Hints” may appear disabled if there's no loaded trace.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.menus.png" NAME="gráficos2" ALIGN=CENTER WIDTH=416 HEIGHT=24 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>If you click the menu “File” what you get is:</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.menu.file.png" NAME="gráficos8" ALIGN=CENTER WIDTH=289 HEIGHT=264 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>Basically, the menu entries let the analyst load/unload
+traces, load Paraver Configuration Files (analysis views constructed
+as combinations of timelines or histograms), or load/save Sessions
+(a global analysis state snapshot). Also the user will be able to change the
+main wxParaver settings with Preferences. 
+</P>
+<A NAME="main_window_menu_bar_hints"></A>
+<P ALIGN=LEFT>Under “Hints” you'll find a two-level structure of menus
+related to your your current enabled Workspaces. The
+second level contains the analysis hints for it. In the example
+below, you see that only the MPI workspace is enabled.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.menu.workspaces.png" NAME="gráficos9" ALIGN=CENTER WIDTH=122 HEIGHT=52 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>Finally, the “Help” menu unfolds to the documentation and
+credits windows:</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.menu.help.png" NAME="gráficos10" ALIGN=CENTER WIDTH=153 HEIGHT=75 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P><BR><BR>
+</P>
+
+<A NAME="main_window_main_buttons_bar"></A>
+<H3 CLASS="western">Main buttons bar</H3>
+<P ALIGN=LEFT>The <A HREF="#__RefHeading__511_1201041753">main buttons</A> appear grouped in three areas: windows creation,
+windows destruction and utilities, as shown below.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.buttonsbar.png" NAME="gráficos11" ALIGN=CENTER WIDTH=205 HEIGHT=31 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>The first three buttons create single, derived timelines and
+histograms, the button with a red cross icon destroys the current selected window. Finally, the last two buttons open dialogs in order to cut/filter your trace or
+execute other tools.</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+<A NAME="main_window_workspaces"></A>
+<H3 CLASS="western">Workspaces</H3>
+<P>Workspaces are sets of the most useful analyses and views and can be enabled or disabled at user request. Their state modify the 
+<A HREF="#main_window_menu_bar_hints">“Hints”</A> menu next time it's opened.</P>
+<P ALIGN=LEFT>In the image below there are two active workspaces. The selection can be changed manually by clicking on the right
+button.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.workspaces.png" NAME="gráficos3" ALIGN=CENTER WIDTH=415 HEIGHT=51 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+
+<A NAME="main_window_window_browser"></A>
+<H3 CLASS="western">Window browser</H3>
+<P ALIGN=LEFT>It provides information about the available windows for the selected trace.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.windowsbrowser.png" NAME="gráficos4" ALIGN=CENTER WIDTH=417 HEIGHT=254 BORDER=0><BR><BR>
+<P ALIGN=LEFT>The current trace is shown in the trace combo box.
+Changing the selector will show the windows for the new selected trace into the below windows section.
+Initially it may be empty if no window has been created or no configuration file has been loaded yet for that trace.</P>
+<P ALIGN=LEFT>The icons on the left of every window entry describe the type of window. In the figure above there are:</P>
+<P><BR><BR></P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<COL WIDTH=42*>
+	<COL WIDTH=214*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><B>Icon</B></P>
+		</TD>
+		<TD WIDTH=91% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Type of Window</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/mainwindow.icon.timeline.png" NAME="gráficos12" ALIGN=CENTER WIDTH=16 HEIGHT=14 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>Single timelines (the first one, or also the leafs of the
+			derived timeline “MPI call duration”)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/mainwindow.icon.add.png" NAME="gráficos13" ALIGN=CENTER WIDTH=16 HEIGHT=16 BORDER=0><IMG SRC="img/mainwindow.icon.product.png" NAME="gráficos14" ALIGN=CENTER WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>Derived timelines (“MPI call duration” itself). The icons
+	represents the function that the child windows use to compose the
+	derived timeline.
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/mainwindow.icon.histogram.png" NAME="gráficos15" ALIGN=CENTER WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>Histograms (the last one)
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P ALIGN=LEFT>Clicking on a timeline or a histogram entry selects it. Then, it's surrounded with a grey square (in the example
+image, “MPI call” timeline appears this way), their properties
+are fed back into the properties section and if the window
+itself is currently open, it rises.</P>
+<P ALIGN=LEFT>Double-click instead shows/hides that window.
+Notice that being hidden is different from being destroyed (with the
+button with a red cross icon in the main buttons bar). If you destroy a window then
+you'll have to create it again if needed, while a hidden window remains loaded.</P>
+<P ALIGN=LEFT>The tool also allows drag and drop operation picking one timeline into
+another to create a derived timeline, as if the second button seen in the previous <A HREF="#main_window_main_icons_bar">Main icons bar</A>
+section was clicked. The derived timeline dialog will be open.</P>
+<P ALIGN=LEFT>Also, right click in a timeline or a histogram entry will open
+their popup menus. 
+</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P><BR><BR>
+</P>
+
+<A NAME="main_window_files_and_window_properties"></A>
+<H3 CLASS="western">Files &amp; Window Properties</H3>
+<P ALIGN=LEFT>The last section of the main window is used for two different
+purposes. These purposes are as a file browser and as a property editor of the current
+selected window.</P>
+<P ALIGN=LEFT>You can change from one to the other clicking one of the two buttons
+on the top left. Left button is for files browser and right button is for
+window properties.</P>
+<P ALIGN=LEFT>When “Files” button is clicked a simple file browser is shown. It can be used to navigate and double click to load a file.
+ They can be filtered with the bottom selector between CFG files (*.cfg), Trace files (*.prv or *.prv.gz) or both.</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.filesbrowser.png" NAME="gráficos6" ALIGN=CENTER WIDTH=418 HEIGHT=425 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>When “Window Properties” button is clicked a collection of properties for the current selected
+window is shown. These properties depends whether it's a timeline, a derived timeline or a histogram.
+ Every time another window's selected its properties are shown.</P>
+<P ALIGN=LEFT>The following image depicts the properties of a single timeline:</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.timelineproperties.png" NAME="gráficos5" ALIGN=CENTER WIDTH=417 HEIGHT=380 BORDER=0><BR><BR>
+</P>
+<P ALIGN=LEFT>This one is for the properties of a histogram window:</P>
+<P ALIGN=CENTER><IMG SRC="img/mainwindow.section.histogramproperties.png" NAME="gráficos7" ALIGN=CENTER WIDTH=416 HEIGHT=527 BORDER=0><BR>
+</P>
+<P ALIGN=LEFT>The properties are grouped under subsections that you can fold/unfold.</P>
+<P ALIGN=LEFT>Every subsection contains a list of
+properties, with their names to the left and their values to the
+right. If you compare the two images above, for the timeline and the
+histogram, you'll see how fields and sections are varying depending
+on the type of window.</P>
+<P ALIGN=LEFT>The value of a property can be changed by clicking into the right side of the property. Some properties get the data with text boxes,
+others from lists of values and others open intermediate dialogs.</P>
+<P ALIGN=LEFT>When the value of a property is modified, the changes are brought inmediately to the window, so it
+would be recomputed again if needed.</P>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+
+<A NAME="__RefHeading__539_1169509088"></A>
+<H2 CLASS="western" ALIGN=LEFT STYLE="page-break-before: always">Main Buttons</H2>
+<P ALIGN=LEFT>There's a reduced set of main buttons in wxparaver focused
+on the main actions: create windows and invoke utilities/external
+tools.</P>
+<P ALIGN=LEFT>They're basically divided between the main window
+and the histogram window. 
+</P>
+
+<A NAME="__RefHeading__511_1201041753"></A>
+<H3 CLASS="western">Main Window</H3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><B>Icon</B></P>
+		</TD>
+		<TD WIDTH=91% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>  Action</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=CENTER>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_697b677a.png" NAME="gráficos2" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Creates a new timeline using the current trace
+			(changeable with the trace selector). By default, the applied
+			semantic is “State As Is”</P>
+		</TD>
+	</TR>
+	<TR VALIGN=CENTER>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_16f948d5.png" NAME="gráficos1" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Opens the “Create Derived Timeline Window”
+			Dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m2da86175.png" NAME="gráficos3" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Opens the “Create Histogram” Dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_27f6a2eb.png" NAME="gráficos4" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Deletes selected timeline or histogram</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_2ef56169.png" NAME="gráficos6" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Opens the “Cut &amp; Filter” Dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_27d7e87f.png" NAME="gráficos5" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Opens the “Run Application” Dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_7d6d057a.png" NAME="gráficos7" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Selects the “Files/Directories” view in the
+			“Files &amp; Window Properties” section</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m26ecc706.png" NAME="gráficos8" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Selects the “Window Properties” view in the
+			“Files &amp; Window Properties” section</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+
+<A NAME="__RefHeading__515_1201041753"></A>
+<H3 CLASS="western">Histogram</H3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT><B>Icon</B></P>
+		</TD>
+		<TD WIDTH=91% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Action</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_4e09eb25.png" NAME="gráficos9" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open the control timeline</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m6567d6f3.png" NAME="gráficos10" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open data timeline 
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_54ba0f2.png" NAME="gráficos11" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open extra control window (in the main window,
+			under Window Properties → 3D → 3rd Window)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m1dec8c4c.png" NAME="gráficos12" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Zoom. It swaps the representation of the
+			histogram between the numerical view and a more compact graphical
+			one</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_4c7d8061.png" NAME="gráficos13" ALIGN=LEFT WIDTH=16 HEIGHT=16 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Opens a timeline showing only a subset of values.
+			After clicking it, the mouse pointer turns into a crosshears icon.
+			By drag and drop, you can set this range of values.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m21f56761.png" NAME="gráficos14" ALIGN=LEFT WIDTH=12 HEIGHT=12 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>View gradient colors for values</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m5811c9cb.png" NAME="gráficos15" ALIGN=LEFT WIDTH=12 HEIGHT=12 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Horizontal / Vertical. Turns 90º to swap rows
+			and values axis 
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_54ad1ff.png" NAME="gráficos16" ALIGN=LEFT WIDTH=12 HEIGHT=12 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Hydes / Shows empty columns</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_m3affa1a9.png" NAME="gráficos18" ALIGN=LEFT WIDTH=12 HEIGHT=12 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Changes the color of the header labels of the
+			colums</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><IMG SRC="img/wxparaver.quickreference_html_12ca758.png" NAME="gráficos17" ALIGN=LEFT WIDTH=12 HEIGHT=12 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=91% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Inclusive/Exclusive overlap accumulation mode
+			(only with stacked values). When exclusive mode is set, overlapped
+			values are substracted from base values. 
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+<A NAME="__RefHeading__541_1169509088"></A>
+<H2 CLASS="western" ALIGN=LEFT STYLE="page-break-before: always">Shortcuts Keys</H2>
+
+<A NAME="__RefHeading__543_1169509088"></A>
+<H3 CLASS="western" ALIGN=LEFT>Overview</H3>
+<P ALIGN=LEFT>Using shortcuts keys in wxparaver is a good way to
+improve your productivity. As you'll see, most of them are generic
+for many applications, so probably you won't need any special effort
+to get used with them.</P>
+<P ALIGN=LEFT>Some of the shortcut keys may vary depending on your
+operative system. This reference is written for GNU/Linux, so
+variations will explicitly tell for which OS happens. It's also
+possible that your desktop/virtual machine had them assigned. Current
+version of wxparaver can't override them.</P>
+
+
+<A NAME="__RefHeading__545_1169509088"></A>
+<H3 CLASS="western" ALIGN=LEFT>Menus</H3>
+<P ALIGN=LEFT>The navigation through menus is done with the arrow
+keys and the Home/End keys, both for the main menu in the main window
+and for the contextual menus of timelines and histograms (after right
+click inside them).</P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT><B>Shortcut Keys</B></P>
+		</TD>
+		<TD WIDTH=50% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Effect</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Up / Down arrows 
+			</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Navigate to previous / next menu item</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Home / End</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Navigate to first / last item of the menu</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Left / Right arrows</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Exit from or Enter to a submenu</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Enter / Space</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Select menu item</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Esc</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Close menu</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+
+<A NAME="__RefHeading__547_1169509088"></A>
+<H3 CLASS="western" ALIGN=LEFT>Dialogs and Fields</H3>
+<P ALIGN=LEFT>The interaction with wxparaver dialogs follow the
+usual dialog standards: Tab to move to next field, Space or Enter to
+change checkboxes or radiobuttons, and common textbox edition.</P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT><B>Shortcut Keys</B></P>
+		</TD>
+		<TD WIDTH=50% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Effect</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Enter</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Intro value</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Tab</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Navigate to next active widget</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Shift + Tab</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Navigate to previous active widget</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Esc</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Cancel dialog and exit</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + A (in textboxes)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Select all</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + Del (in textboxes)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Delete to next dot/comma or to the end</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Left/Right arrows (in textboxes)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Move cursor in text boxes</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Enter / Space (in radiobuttons or checkboxes)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Check/uncheck radio button or checkbox</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Up / Down arrows (in spin controls)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>+1/-1 unit</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+<A NAME="__RefHeading__212_715628310"></A>
+<H3 CLASS="western" ALIGN=LEFT>Main Window Shortcut Keys</H3>
+<P ALIGN=LEFT>They mainly manage the dialogs for handling sessions
+and opening traces.</P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT><B>Shortcut Keys</B></P>
+		</TD>
+		<TD WIDTH=50% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Effect</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + I</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open “Load Session” dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + L (Windows only)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open “Load Session” dialog 
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + S</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open “Save Session” dialog</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + O</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open trace file</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + Q</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Quit wxparaver</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Esc</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Close menu / Cancel dialog</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+<P ALIGN=LEFT><BR><BR></P>
+
+<A NAME="__RefHeading__549_1169509088"></A>
+<H3 CLASS="western" ALIGN=LEFT>Timelines and Histograms</H3>
+<P ALIGN=LEFT>One usual way to explore timelines and histograms is
+by using mouse “Drag and Drop”. The default performed action
+(zoom in for all the rows) can be tuned if you press Ctrl or Shift at
+the same time.</P>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0 border="1">
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT><B>Shortcut Keys</B></P>
+		</TD>
+		<TD WIDTH=50% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=LEFT><B>Effect</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + C</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Copy all properties</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + V</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Open “Paste Special” dialog to paste
+			properties</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Shift + Drag &amp; Drop (only in timelines)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Measure region duration</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Ctrl + Drag &amp; Drop</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Zoom by rows and time 
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=LEFT>Esc (while Drag &amp; Drop)</P>
+		</TD>
+		<TD WIDTH=50% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=LEFT>Abort current Drag &amp; Drop</P>
+		</TD>
+	</TR>
+</TABLE>
+<P ALIGN=LEFT><A HREF="#__RefHeading__537_1169509088"><FONT SIZE=2>&lt;&lt;</FONT></A></P>
+
+</BODY>
+</HTML>
