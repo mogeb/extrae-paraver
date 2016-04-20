@@ -1,0 +1,6 @@
+ktraceeditstates.lo: ktraceeditstates.cpp /usr/include/stdc-predef.h \
+ ../include/ktraceeditstates.h
+
+/usr/include/stdc-predef.h:
+
+../include/ktraceeditstates.h:

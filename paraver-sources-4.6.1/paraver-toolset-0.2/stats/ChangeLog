@@ -1,0 +1,12 @@
+2.1
+
+  * Initial from Juan Gonzalez's TRACE2TRACE/stats improved version.
+  + 20130327 [CHANGE] Uncommented final printf to see which files (.gnuplot or .dat) have been
+created.
+  + 20130328 [CHANGE] Added BSC header to both .h and .c
+  + 20130328 [CHANGE] stats binary changed to stats.bin, link stats ->
+	stats.bin in install time.
+
+2.0
+  * TRACE2TRACE/stats
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *********************************************************************** -->
+<!--                    PARAVER TRACE FILTER CONFIGURATION                   -->
+<!--                             PERFORMANCE TOOLS                           -->
+<!--  Barcelona Supercomputing Center - Centro Nacional de Supercomputacion  -->
+<!-- *********************************************************************** -->
+
+<config>
+  <!-- SOFTWARE COUNTERS OPTIONS -->
+  <software_counters>
+    <range>
+      <by_intervals_vs_by_states>0</by_intervals_vs_by_states>
+      <sampling_interval>100000</sampling_interval>
+      <minimum_burst_time>1000000</minimum_burst_time>
+      <events>50000001;50000003:3,10;50000004</events>
+    </range>
+    <algorithm>
+      <count_events_vs_acummulate_values>0</count_events_vs_acummulate_values>
+      <remove_states>0</remove_states>
+      <summarize_useful_states>0</summarize_useful_states>
+      <global_counters>0</global_counters>
+      <only_in_burst_counting>0</only_in_burst_counting>
+      <keep_events>40000001;40000003;40000006;40000010</keep_events>
+    </algorithm>
+  </software_counters>
+</config>

@@ -1,0 +1,76 @@
+/*****************************************************************************\
+ *                        ANALYSIS PERFORMANCE TOOLS                         *
+ *                               libparaver-api                              *
+ *                      API Library for libparaver-kernel                    *
+ *****************************************************************************
+ *     ___     This library is free software; you can redistribute it and/or *
+ *    /  __         modify it under the terms of the GNU LGPL as published   *
+ *   /  /  _____    by the Free Software Foundation; either version 2.1      *
+ *  /  /  /     \   of the License, or (at your option) any later version.   *
+ * (  (  ( B S C )                                                           *
+ *  \  \  \_____/   This library is distributed in hope that it will be      *
+ *   \  \__         useful but WITHOUT ANY WARRANTY; without even the        *
+ *    \___          implied warranty of MERCHANTABILITY or FITNESS FOR A     *
+ *                  PARTICULAR PURPOSE. See the GNU LGPL for more details.   *
+ *                                                                           *
+ * You should have received a copy of the GNU Lesser General Public License  *
+ * along with this library; if not, write to the Free Software Foundation,   *
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA          *
+ * The GNU LEsser General Public License is contained in the file COPYING.   *
+ *                                 ---------                                 *
+ *   Barcelona Supercomputing Center - Centro Nacional de Supercomputacion   *
+\*****************************************************************************/
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- *\
+ | @file: $HeadURL$
+ | @last_commit: $Date: 2016/02/16 13:12:23 $
+ | @version:     $Revision: 1.10 $
+\* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#ifndef EVENTLABELS_H_INCLUDED
+#define EVENTLABELS_H_INCLUDED
+
+#include <set>
+#include <map>
+#include "paraverkerneltypes.h"
+
+#ifdef OLD_PCFPARSER
+#include "pcfparser/ParaverTraceConfig.h"
+#else
+#include "pcfparser/libtools/UIParaverTraceConfig.h"
+#endif
+
+using namespace libparaver;
+
+class EventLabels
+{
+  public:
+    static const std::string unknownLabel;
+
+    EventLabels();
+    EventLabels( const std::set<TEventType>& eventsLoaded );
+#ifdef OLD_PCFPARSER
+    EventLabels( const ParaverTraceConfig& config,
+                 const std::set<TEventType>& eventsLoaded );
+#else
+    EventLabels( const UIParaverTraceConfig& config,
+                 const std::set<TEventType>& eventsLoaded );
+#endif
+    ~EventLabels();
+
+    void getTypes( std::vector<TEventType>& onVector ) const;
+    bool getEventTypeLabel( TEventType type, std::string& onStr ) const;
+    bool getEventValueLabel( TEventType type, TEventValue value, std::string& onStr ) const;
+    bool getEventValueLabel( TEventValue value, std::string& onStr ) const;
+    bool getValues( TEventType type, std::vector<std::string> &values ) const;
+    bool getValues( TEventType type, std::map<TEventValue, std::string> &values ) const;
+
+  protected:
+
+  private:
+    std::map<TEventType, std::string> eventTypeLabel;
+    std::map<TEventType, std::map<TEventValue, std::string> > eventValueLabel;
+};
+
+
+#endif // EVENTLABELS_H_INCLUDED

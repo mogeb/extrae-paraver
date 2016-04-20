@@ -1,0 +1,8 @@
+1.1
+
+  + 20130523 [CHANGE] merger binary changed to prvmerger.bin, link prvmerger ->
+	prvmerger.bin in install time.
+
+?.? -> 1.0
+  * TRACE2TRACE/merger
+

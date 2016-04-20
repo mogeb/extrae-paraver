@@ -1,0 +1,12 @@
+### paraver-toolset Changes ###
+
+0.1
+  Initial version
+	* 20130327 [CHANGE] Added stats
+	- 20130327 [CHANGE] autotoolization
+	- 20130327 [CHANGE] Installed binaries are stripped
+0.2
+  + 20130527 [CHANGE] Added prvmerger
+0.3
+  + 20141014 [CHANGE] Added event_translator (previous call_renaming)
+
